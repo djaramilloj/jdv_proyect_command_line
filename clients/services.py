@@ -24,6 +24,7 @@ class ClientService:
         clients = self.list_clients()
 
         updated_clients = list()
+
         for cli in clients:
             if cli['uid'] == updated_client.uid:
                 updated_clients.append(updated_client.to_dict())
@@ -31,6 +32,22 @@ class ClientService:
                 updated_clients.append(cli)
         
         self._save_to_disk(updated_clients)
+
+
+    def delete_client(self, uid):
+        clients = self.list_clients()
+
+        updated_clients = list()
+
+        for cli in clients:
+
+            if cli['uid'] == uid:
+                pass
+            else:
+                updated_clients.append(cli)
+        
+        self._save_to_disk(updated_clients)
+
     
 
     def _save_to_disk(self, clients):
@@ -41,5 +58,8 @@ class ClientService:
 
         os.remove(self.table_name)
         os.rename(temp_table_name, self.table_name)
+
+    
+
 
 
