@@ -1,0 +1,8 @@
+jdv.py
+setup.py
+jdv.egg-info/PKG-INFO
+jdv.egg-info/SOURCES.txt
+jdv.egg-info/dependency_links.txt
+jdv.egg-info/entry_points.txt
+jdv.egg-info/requires.txt
+jdv.egg-info/top_level.txt
